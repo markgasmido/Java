@@ -17,8 +17,36 @@ public class Results {
 	}
 
 	public static void percentage(int physics, int chemistry, int biology) {
+		boolean flag = false;
+		int count = 0;
+
+		if (physics < 90) {
+			flag = true;
+			count++;
+		}
+		if (chemistry < 90) {
+			flag = true;
+			count++;
+		}
+		if (biology < 90) {
+			flag = true;
+			count++;
+		}
+
 		int total = physics + chemistry + biology;
 		double percentage = (total * 100) / 450;
 		System.out.println("The exam percentage that this student achieved was: " + percentage + "%");
+		if (flag && count == 1) {
+			System.out.println(
+					"The passing mark is 60%. Student has failed the test as  they have failed one test.");
+		}
+		if (flag && count == 2) {
+			System.out.println(
+					"The passing mark is 60%. Student has failed the test as  they have failed two tests.");
+		}
+		if (flag && count == 3) {
+			System.out.println(
+					"The passing mark is 60%. Student has failed the test as  they have failed three tests.");
+		}
 	}
 }

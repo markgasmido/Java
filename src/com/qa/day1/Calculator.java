@@ -17,7 +17,13 @@ public class Calculator {
 	}
 
 	public static double division(double firstInteger, double secondInteger) {
-		double total = firstInteger / secondInteger;
-		return total;
+		if (firstInteger > secondInteger) {
+			double total = firstInteger / secondInteger;
+			return total;
+		}
+		else {
+			System.out.println("This division cannot be performed as the first integer is smaller than the second");
+			return 0;
+		}
 	}
 }
