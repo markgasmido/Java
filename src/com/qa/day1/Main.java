@@ -14,8 +14,8 @@ public class Main {
 //		Operators.operators();
 		System.out.println(Calculator.addition(1, 2));
 		System.out.println(Calculator.division(3, 32));
-		Results.percentage(75, 75, 100);
-		Results.result(3, 4, 5);
+//		Results.percentage(75, 75, 100);
+//		Results.result(3, 4, 5);
 		conditionalLogic.flowCharts2(10);
 	
 	}
