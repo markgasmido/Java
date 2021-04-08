@@ -1,6 +1,7 @@
 package PersonChallenge;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Person {
 	private String name;
@@ -46,5 +47,45 @@ public class Person {
 		}
 		return null;
 	}
+
+	public void menu() {
+		Scanner s = new Scanner(System.in);
+//		boolean sss = false;
+
+		System.out.println(
+				"What do you want to do?\n 1. Create person \n 2. Output all people to console \n 3. Search for specific person \n Please input the number you want to execute.");
+		int ss = s.nextInt();
+
+//		if (sss) {
+		if (ss == 1) {
+			System.out.println("Creating person. Please enter the name, age and job title.");
+			String namePerson = s.nextLine();
+			int agePerson = s.nextInt();
+			s.nextLine(); // catch enter
+			String jobTitlePerson = s.nextLine();
+			// Person(namePerson, agePerson, jobTitlePerson);
+
+		} else if (ss == 2) {
+			System.out.println("Printing all of the people in the list.");
+			for (Person person : list) {
+				System.out.println(person.name);
+			}
+
+		} else if (ss == 3) {
+
+			System.out.println("Who do you want to search for?");
+			s.nextLine(); //catch enter
+			String namePerson = s.nextLine();
+			System.out.println("Searching");
+			if(who(namePerson) != null) {
+				System.out.println(who(namePerson));
+			} else {
+				System.out.println("Person not found in the list.");
+			}
+		} else {
+			System.out.println("Invalid entry please try again");
+		}
+	}
+//	}
 
 }

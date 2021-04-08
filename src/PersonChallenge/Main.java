@@ -21,6 +21,8 @@ public class Main {
 		Person test = new Person();
 		test = test.who("Mark");
 		System.out.println(test);
+		
+		mark.menu();
 	}
 
 }

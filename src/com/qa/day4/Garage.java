@@ -72,7 +72,7 @@ public class Garage {
 	}
 
 	public void fixVehicle(int ID) {
-		System.out.println("Fixed vehicle.\n");
+		System.out.println("Fixed vehicle.");
 		calculatingBill(ID);
 		removeVehicle(ID);
 	}
